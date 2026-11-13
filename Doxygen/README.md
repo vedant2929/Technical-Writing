@@ -1,71 +1,49 @@
+
 # Doxygen Documentation
 
 ## 1. Introduction
-Doxygen is a documentation generation tool that creates reference documentation directly from specially formatted comments in source code.
 
-## 2. Uses
-- Generate software reference manuals.
-- Document classes and functions.
-- Describe parameters and return values.
-- Generate HTML and LaTeX documentation.
+Doxygen is a documentation generator used to create software documentation from specially formatted comments in source code.
 
-## 3. Documentation Comments
-Example in C++:
+## 2. Purpose
+
+- Documents C and C++ programs.
+- Generates HTML documentation.
+- Can generate LaTeX documentation.
+- Helps developers understand functions, parameters and return values.
+
+## 3. Documentation Tags
+
+| Tag | Purpose |
+|---|---|
+| @file | Describes a source file |
+| @brief | Provides a short description |
+| @param | Describes a function parameter |
+| @return | Describes the returned value |
+| @author | Specifies the author |
+| @version | Specifies the version |
+
+## 4. Example
+
 ```cpp
 /**
  * @brief Adds two integers.
  * @param a First integer.
  * @param b Second integer.
- * @return Sum of the two integers.
+ * @return Sum of the integers.
  */
 int add(int a, int b) {
     return a + b;
 }
 ```
 
-## 4. Common Doxygen Commands
+## 5. Doxygen Workflow
 
-| Tag | Purpose |
-|---|---|
-| `\brief` | Short description |
-| `\param` | Parameter description |
-| `\return` | Return value description |
-| `\author` | Author information |
-| `\version` | Version information |
-| `\see` | Reference to related items |
-| `\note` | Additional note |
+1. Write documentation comments in the source code.
+2. Configure Doxygen using a Doxyfile.
+3. Run Doxygen.
+4. Open the generated HTML documentation.
 
-## 5. Basic Workflow
+## 6. Conclusion
 
-1. Write specially formatted comments in the source code.
-2. Generate a configuration file.
-3. Edit the configuration file.
-4. Run Doxygen.
-5. Open the generated documentation.
-
-## 6. Generate Configuration
-```bash
-doxygen -g Doxyfile
-```
-
-## 7. Generate Documentation
-```bash
-doxygen Doxyfile
-```
-
-## 8. Output
-Doxygen can generate:
-- HTML documentation
-- LaTeX documentation
-- PDF documentation through the LaTeX output workflow
-
-The generated HTML documentation can commonly be opened at:
-```text
-html/index.html
-```
-
-## 9. Configuration
-The Doxyfile controls settings such as project name, input files, output formats, and recursive directory scanning.
-
-## Conclusion
-Doxygen automates code documentation and helps developers maintain readable and organized software reference manuals.
+Doxygen simplifies code documentation and improves software maintainability by generating structured documentation from source-code comments.
